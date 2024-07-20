@@ -148,7 +148,7 @@ server <- function(input, output, session) {
   
   # Render logo
   output$logo <- renderUI({
-    tags$img(src = "data/bondscope.png", 
+    tags$img(src = "https://raw.githubusercontent.com/tsu2000/bondscope_sg/main/www/bondscope.png", 
              alt = "BondScope SG Logo",
              style = "display: inline-block; vertical-align: middle; height: 30px; margin-right: 10px;"
     )
