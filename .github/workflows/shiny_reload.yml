@@ -16,7 +16,7 @@ jobs:
 
       - name: Reload Shiny App
         env:
-          SHINY_TOKEN: ${{ secrets.SHINY_TOKEN }}
+          SHINY_TOKEN: ${{ secrets.TOKEN }}
         run: |
           # Replace <app-url> with the URL of your Shiny app
           # Include the Shiny token in the request headers
