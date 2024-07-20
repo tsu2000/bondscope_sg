@@ -67,14 +67,14 @@ ui <- fluidPage(
   navbarPage(
     title = tags$div(
       style = "display: flex;",
-      img(src = "bondscope.png", style = "height: 1em; margin-right: 10px;"),
+      img(src = "https://raw.githubusercontent.com/tsu2000/bondscope_sg/main/www/bondscope.png", style = "height: 1em; margin-right: 10px;"),
       div("BondScope SG", style = "font-family: Gill Sans, sans-serif; font-size: 20px; font-weight: bold; color: #FFC300;")
     ),
     tabPanel("📈 Data Trends",
              sidebarLayout(
                sidebarPanel(
                  tags$h3("📈 Data Trends for Singapore SGS Bonds/T-Bills"),
-                 checkboxGroupInput("bond_choices", "Select bond types to be shown on graph:", choices = bond_opts, selected = c("2-Year SGS Bond", "5-Year SGS Bond", "10-Year SGS Bond")),
+                 checkboxGroupInput("bond_choices", "Select the specific bond types to be shown on graph:", choices = bond_opts, selected = c("2-Year SGS Bond", "5-Year SGS Bond", "10-Year SGS Bond")),
                  selectInput("time_period", "Select time period to display data:", choices = time_periods, selected = "1 yr"),
                  width = 3
                ),
@@ -148,7 +148,7 @@ server <- function(input, output, session) {
   
   # Render logo
   output$logo <- renderUI({
-    tags$img(src = "https://raw.githubusercontent.com/tsu2000/bondscope_sg/main/www/bondscope.png", 
+    tags$img(src = "data/bondscope.png", 
              alt = "BondScope SG Logo",
              style = "display: inline-block; vertical-align: middle; height: 30px; margin-right: 10px;"
     )
